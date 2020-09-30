@@ -32,3 +32,23 @@ WhiteEx <- (White$Expenditures[])
 allEthnicity <- c('American Indian' ,'Asian' , 'Black', 'Hispanic', 'Multi Race', 'Native Hawaiian', 'Other', 'White')
 boxplot(americanIndianEx, AsianEx, BlackEx, HispanicEx, multiRaceEx, nativeHawaiianEx, OtherEx, WhiteEx, names = allEthnicity, main = 'Expenditure by Ethnicity', ylab = 'Expenditures')
 
+zeroToFive <- subset(myData,myData$Age <= 5)
+zeroToFiveEx <- (zeroToFive$Expenditures[])
+
+sixToTwelve <- subset(myData, myData$Age > 5 & myData$Age <= 12)
+sixToTwelveEX <- (sixToTwelve$Expenditures[])
+
+thirteenToSeventeen <- subset(myData, myData$Age > 12 & myData$Age <= 17)
+thirteenToSeventeenEX <- (thirteenToSeventeen$Expenditures[])
+
+eighteenToTwentyone <- subset(myData, myData$Age > 17 & myData$Age <= 21)
+eighteenToTwentyoneEX <- (eighteenToTwentyone$Expenditures[])
+
+twentytwoToFifty <- subset(myData, myData$Age > 21 & myData$Age <= 50)
+twentytwoToFiftyEX <- (twentytwoToFifty$Expenditures[])
+
+fiftyOnePlus <- subset(myData, myData$Age > 51)
+fiftyOnePlusEx <- (fiftyOnePlus$Expenditures[])
+
+allAges <- c('0 to 5', '6 to 12', '13 to 17', '18 to 21', '22 to 50', '51+')
+boxplot(zeroToFiveEx, sixToTwelveEX, thirteenToSeventeenEX, eighteenToTwentyoneEX, twentytwoToFiftyEX, fiftyOnePlusEx, names = allAges, main = 'Expenditure by Ethnicity', ylab = 'Expenditures')
